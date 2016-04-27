@@ -126,6 +126,107 @@ namespace challenges
         }
 
         /// <summary>
+        /// https://www.hackerrank.com/challenges/reverse-shuffle-merge
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>FAILED</returns>
+        public static string ReverseShuffleMerge(string input)
+        {
+            var letterDict = new Dictionary<char, int>();
+            var letters = string.Concat(input.OrderBy(l => l));
+            var sb = new StringBuilder();
+            for (var i = 0; i < letters.Length; i++)
+            {
+                if (!letterDict.ContainsKey(letters[i]))
+                {
+                    letterDict.Add(letters[i], 1);
+                    if (i == 0) continue;
+
+                    sb.Append(new string(letters[i - 1], letterDict[letters[i - 1]] / 2));
+                }
+                else
+                {
+                    letterDict[letters[i]]++;
+                }
+            }
+
+            // Add last letter
+            sb.Append(new string(letters[letters.Length - 1], letterDict[letters[letters.Length - 1]] / 2));
+
+            var result = String.Concat(sb.ToString().OrderBy(s => s));
+            return result;
+        }
+
+        /// <summary>
+        /// https://www.hackerrank.com/challenges/string-reduction
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string StringReduction(string input)
+        {
+            var inputs = input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+            int res;
+            var sb = new StringBuilder();
+            var numcases = Convert.ToInt32(inputs[0]);
+            for (var i = 0; i < numcases; i++)
+            {
+                var a = inputs[i + 1].Trim();
+                var dic = new Dictionary<char, int>();
+                for (int j = 0; j < a.Length; j++)
+                {
+                    if (dic.ContainsKey(a[j]))
+                        dic[a[j]]++;
+                    else
+                        dic.Add(a[j], 1);
+                }
+
+                // if there's only 1 type of letter, then it's the array length
+                // if all letters are in even number, or odd number then it reduces to 2, always
+                // otherwise it reduces to 1
+                if (dic.Keys.Count == 1)
+                    res = a.Length;
+                else if (dic.Values.All(v => v%2 == 0) || (dic.Values.All(v => v%2 != 0) && dic.Keys.Count == 3))
+                    res = 2;
+                else
+                    res = 1;
+
+                sb.Append(res);
+                if (i != numcases - 1)
+                    sb.AppendLine();
+
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// https://www.hackerrank.com/challenges/common-child
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static int CommonChild(string input)
+        {
+            var inputs = input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+            var word_1 = inputs[0];
+            var word_2 = inputs[1];
+            var L = new int[word_1.Length+1, word_2.Length+1];
+
+            for (int i = 0; i < word_1.Length; i++)
+            {
+                for (int j = 0; j < word_2.Length; j++)
+                {
+                    if (word_1[i] == word_2[j])
+                    {
+                        L[i + 1, j + 1] = L[i, j] + 1;
+                    }
+                    else
+                        L[i + 1, j + 1] = Math.Max(L[i + 1, j], L[i, j + 1]);
+                }
+            }
+
+            return  L[word_1.Length, word_2.Length];
+        }
+
+        /// <summary>
         /// https://www.hackerrank.com/challenges/angry-children
         /// </summary>
         /// <param name="input"></param>

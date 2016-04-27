@@ -64,6 +64,8 @@
     <Compile Include="MaxMin.cs" />
     <Compile Include="GreedyFlorist.cs" />
     <Compile Include="Pairs.cs" />
+    <Compile Include="CommonChild.cs" />
+    <Compile Include="StringReduction.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\challenges\challenges.csproj">
@@ -154,6 +156,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pairs1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stringreduction1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stringreduction2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stringreduction11.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stringreduction21.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

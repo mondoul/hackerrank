@@ -517,5 +517,66 @@ namespace tests.test_files {
                 return ResourceManager.GetString("pairs1", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3  
+        ///cab  
+        ///bcab  
+        ///ccccc.
+        /// </summary>
+        internal static string stringreduction1 {
+            get {
+                return ResourceManager.GetString("stringreduction1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2  
+        ///1  
+        ///5.
+        /// </summary>
+        internal static string stringreduction11 {
+            get {
+                return ResourceManager.GetString("stringreduction11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100
+        ///baccbbacababacacbaccaacccbccaccbabac
+        ///acaacababbcbabbbbbaaaabacaabbcbac
+        ///bcbcacacbbaaccbaacbccaca
+        ///ccbaccbcabcabcbacbaaabbacaaabaabbabacaabbcbabacbcccbaabacccaacbbaacabcbacabb
+        ///aaba
+        ///cbbbcabbbababcababbccbcacbbaacbaacbcabbbbbbabcbbbbaacaabbcacbbccabcaaccbaabbab
+        ///bcbccbcbbababcaaacbbcaab
+        ///bacbccacacbbabaacbbacaacbcbbcaccabaaaccabcccaacccccbcbbaaacaabcbcbb
+        ///acaccaccabcaaacababcaacaccacbccbbababaacaabbaaccbbbccabcababacaabcbaacaacbcacccbbaabacbcabacbcccbaa
+        ///cbaccaccacabccabbbaaabcbbccccccaacababaaacbbcbcb [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string stringreduction2 {
+            get {
+                return ResourceManager.GetString("stringreduction2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100
+        ///baccbbacababacacbaccaacccbccaccbabac
+        ///acaacababbcbabbbbbaaaabacaabbcbac
+        ///bcbcacacbbaaccbaacbccaca
+        ///ccbaccbcabcabcbacbaaabbacaaabaabbabacaabbcbabacbcccbaabacccaacbbaacabcbacabb
+        ///aaba
+        ///cbbbcabbbababcababbccbcacbbaacbaacbcabbbbbbabcbbbbaacaabbcacbbccabcaaccbaabbab
+        ///bcbccbcbbababcaaacbbcaab
+        ///bacbccacacbbabaacbbacaacbcbbcaccabaaaccabcccaacccccbcbbaaacaabcbcbb
+        ///acaccaccabcaaacababcaacaccacbccbbababaacaabbaaccbbbccabcababacaabcbaacaacbcacccbbaabacbcabacbcccbaa
+        ///cbaccaccacabccabbbaaabcbbccccccaacababaaacbbcbcb [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string stringreduction22 {
+            get {
+                return ResourceManager.GetString("stringreduction22", resourceCulture);
+            }
+        }
     }
 }
