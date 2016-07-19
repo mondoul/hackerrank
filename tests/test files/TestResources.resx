@@ -154,6 +154,15 @@
   <data name="gridsearch_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\gridsearch_5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="lrect0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lrect0.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
+  </data>
+  <data name="lrect1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lrect01.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
+  </data>
+  <data name="lrect2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lrect011.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="matrixrotation_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\matrixrotation_1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
   </data>
@@ -198,5 +207,11 @@
   </data>
   <data name="stringreduction22" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stringreduction21.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="validstring1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\validstring1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="validstring2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\validstring2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

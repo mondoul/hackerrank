@@ -312,6 +312,36 @@ namespace tests.test_files {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 8
+        ///7 2 1 4 5 1 3 3.
+        /// </summary>
+        internal static string lrect0 {
+            get {
+                return ResourceManager.GetString("lrect0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10
+        ///8979 4570 6436 5083 7780 3269 5400 7579 2324 2116.
+        /// </summary>
+        internal static string lrect1 {
+            get {
+                return ResourceManager.GetString("lrect1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10000
+        ///17251 111021 468274 103217 350415 61669 796450 156297 953054 440459 2535 286823 298241 387365 223650 332004 425095 26510 469625 680912 818738 228517 300529 890259 761985 471457 634320 720004 819617 52746 124428 836868 163767 109054 456437 30534 170723 252887 186832 123778 209698 705719 410601 507940 609436 150603 356296 550883 177113 825921 231795 512203 570790 48677 402462 332776 520134 553135 569132 339751 605881 209912 692971 286001 318967 149408 316535 489690 918647 19719 129820 128346 241790 567 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string lrect2 {
+            get {
+                return ResourceManager.GetString("lrect2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4 4 1
         ///1 2 3 4
         ///5 6 7 8
@@ -531,8 +561,8 @@ namespace tests.test_files {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2  
-        ///1  
+        ///   Looks up a localized string similar to 2
+        ///1
         ///5.
         /// </summary>
         internal static string stringreduction11 {
@@ -561,21 +591,128 @@ namespace tests.test_files {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 100
-        ///baccbbacababacacbaccaacccbccaccbabac
-        ///acaacababbcbabbbbbaaaabacaabbcbac
-        ///bcbcacacbbaaccbaacbccaca
-        ///ccbaccbcabcabcbacbaaabbacaaabaabbabacaabbcbabacbcccbaabacccaacbbaacabcbacabb
-        ///aaba
-        ///cbbbcabbbababcababbccbcacbbaacbaacbcabbbbbbabcbbbbaacaabbcacbbccabcaaccbaabbab
-        ///bcbccbcbbababcaaacbbcaab
-        ///bacbccacacbbabaacbbacaacbcbbcaccabaaaccabcccaacccccbcbbaaacaabcbcbb
-        ///acaccaccabcaaacababcaacaccacbccbbababaacaabbaaccbbbccabcababacaabcbaacaacbcacccbbaabacbcabacbcccbaa
-        ///cbaccaccacabccabbbaaabcbbccccccaacababaaacbbcbcb [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to 1
+        ///1
+        ///2
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///2
+        ///1
+        ///1
+        ///1
+        ///2
+        ///2
+        ///1
+        ///1
+        ///2
+        ///2
+        ///1
+        ///2
+        ///1
+        ///2
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///2
+        ///2
+        ///1
+        ///1
+        ///2
+        ///2
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///2
+        ///2
+        ///1
+        ///1
+        ///1
+        ///2
+        ///1
+        ///1
+        ///1
+        ///1
+        ///2
+        ///2
+        ///1
+        ///2
+        ///1
+        ///2
+        ///1
+        ///1
+        ///1
+        ///2
+        ///1
+        ///1
+        ///2
+        ///1
+        ///2
+        ///1
+        ///1
+        ///2
+        ///1
+        ///2
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///2
+        ///1
+        ///2
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///1
+        ///2
+        ///1
+        ///1
+        ///2
+        ///1.
         /// </summary>
         internal static string stringreduction22 {
             get {
                 return ResourceManager.GetString("stringreduction22", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedcabfihchdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgfeeibgaiffdehigebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddghdgbgehhhifhgcedechahidcbchebheihaadbbbiaiccededchdagfhccfdefigfibifabeiaccghcegfbcghaefifbachebaacbhbfgfddeceababbacgffbagidebeadfihaefefegbghgddbbgddeehgfbhafbccidebgehifafgbghafacgfdccgifdcb [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string validstring1 {
+            get {
+                return ResourceManager.GetString("validstring1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ebhcgicceggecgdcibbeicigehhebabiehbdgaeaigihghbhigihfebgabicbgfhhedgbfehiahchcecedffhccebifcbdfcfaecicafahfiecceeaabbecfhgbfifabbffadcieeaiidddhfdeccaedbgcfdehbadihheieidgcfbdiiicgahebfbbdfeffegbdhgdagefhbgafaabfghdcbfdhabhfahbdhgifbghhafcieachcbeabccbiigdcfegcccfafehegbiecbdhabcffggiifaabfagbfdfbfacdcafabccgibiidgabiabigbgbbaideeagaaffcddhieicehhchfedfgbgbfhgedhacegaieeedggacbbgadeibbbcdhbabbieibcfbhgdbbiecdhbffaghhchhddcihgdgbgdcfgfggeaahffgiddeadgcegaiddhhdgagdidgacafececiebeigcbdfaedibbgbhciihcdifbacdag [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string validstring2 {
+            get {
+                return ResourceManager.GetString("validstring2", resourceCulture);
             }
         }
     }

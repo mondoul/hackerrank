@@ -2,14 +2,60 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 
 namespace challenges
 {
-    public static class Challenges
+    public static partial class Challenges
     {
         static void Main(string[] args)
         {
                 
+        }
+
+
+        /// <summary>
+        /// https://www.hackerrank.com/challenges/largest-rectangle
+        /// 
+        /// https://www.youtube.com/watch?v=ZmnqCZp9bBs
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static int LargestRectangle(string input)
+        {
+            var inputs = input.Split(new[] { "\r\n" }, StringSplitOptions.None);
+            var size = Convert.ToInt32(inputs[0]);
+            var values = Array.ConvertAll(inputs[1].Split(new[] { " " }, StringSplitOptions.None), int.Parse);
+
+            var stack = new Stack<int>();
+
+            var maxArea = -1;
+            int top;
+
+            for (var i = 0; i < size; )
+            {
+                // if stack is empty or current value >= top of stack value, add index to stack
+                if (!stack.Any() || values[i] >= values[stack.Peek()])
+                {
+                    stack.Push(i++);
+                }
+                else
+                {
+                    // currentValue < top of stack, let's calculate areas - removing from the stack - until we find a number <= to current value
+                    top = stack.Pop();
+                    var area = stack.Any() ? values[top] * (i - stack.Peek() - 1) : values[top] * i;
+                    maxArea = area > maxArea ? area : maxArea;
+                }
+            }
+
+            while (stack.Any())
+            {
+                top = stack.Pop();
+                var area = stack.Any() ? values[top] * (size - stack.Peek() - 1) : values[top] * size;
+                maxArea = area > maxArea ? area : maxArea;
+            }
+
+            return maxArea;
         }
 
         /// <summary>
@@ -199,6 +245,31 @@ namespace challenges
         }
 
         /// <summary>
+        /// https://www.hackerrank.com/challenges/sherlock-and-valid-string
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string ValidString(string input)
+        {
+            var isValid = false;
+            var lettersCount = new int[26];
+
+            for (var i = 0; i < input.Length; i++)
+            {
+                lettersCount[char.ToUpper(input[i]) - 65]++;
+            }
+
+            var countList = lettersCount.OrderBy(l => l)
+                                        .SkipWhile(l => l == 0).ToList();
+            if (countList.First() == 1 && countList.Skip(1).Sum(c => c) == (countList.Count - 1) * countList.Last())
+                isValid = true;
+            else if (countList.Sum(c => c) <= countList.Count * countList.First() + 1)
+                isValid = true;
+
+            return isValid ? "YES" : "NO";
+        }
+
+        /// <summary>
         /// https://www.hackerrank.com/challenges/common-child
         /// </summary>
         /// <param name="input"></param>
@@ -334,6 +405,55 @@ namespace challenges
             }
 
             return res;
+        }
+
+        public static string QuicksortInPlace(string input)
+        {
+            var inputs = input.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+            var size = Convert.ToInt32(inputs[0]);
+            var ints = inputs[1].Split(' ');
+            var array = new int[size];
+            
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = Convert.ToInt32(ints[i]);
+            }
+
+            quicksort(array, 0, size -1);
+            return"";
+        }
+
+        private static void quicksort(int[] arr, int lo, int hi)
+        {
+            if (lo < hi)
+            {
+                var pivot = partition(arr, lo, hi);
+                quicksort(arr, lo, pivot - 1);
+                quicksort(arr, pivot + 1, hi);
+            }
+        }
+
+        private static int partition(int[] arr, int lo, int hi)
+        {
+            var pivot = arr[hi];
+            var i = lo;
+            for (int j = lo; j < hi; j++)
+            {
+                if (arr[j] <= pivot)
+                {
+                    Swap(arr, j, i);
+                    i++;
+                }
+            }
+            Swap(arr, hi, i); // put pivot in its place
+            return i;
+        }
+
+        private static void Swap(int[] arr, int i, int j)
+        {
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
         
         /// <summary>

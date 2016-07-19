@@ -66,6 +66,9 @@
     <Compile Include="Pairs.cs" />
     <Compile Include="CommonChild.cs" />
     <Compile Include="StringReduction.cs" />
+    <Compile Include="Quicksort.cs" />
+    <Compile Include="LargestRectangle.cs" />
+    <Compile Include="ValidString.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\challenges\challenges.csproj">
@@ -168,6 +171,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stringreduction21.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validstring1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validstring11.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validstring2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lrect0.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lrect01.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lrect011.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
